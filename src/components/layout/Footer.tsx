@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Instagram, Facebook, Linkedin, Shield, Lock, ExternalLink } from 'lucide-react';
+import { assetUrl } from '../../lib/utils';
 
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -13,7 +14,7 @@ export const Footer: React.FC = () => {
           <div className="lg:col-span-2 space-y-4">
             <Link to="/" className="inline-block" aria-label="4XML Início">
               <img
-                src="/images/Logo_4xml-300x139.png"
+                src={assetUrl('images/Logo_4xml-300x139.png')}
                 alt="4XML Fabritech"
                 className="h-10 w-auto object-contain brightness-110"
               />

@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Clock, Calendar, BookOpen } from 'lucide-react';
 import { getBlogPosts } from '../../lib/storage';
+import { assetUrl } from '../../lib/utils';
 
 export const BlogPreviewSection: React.FC = () => {
   const posts = getBlogPosts().slice(0, 3);
@@ -43,7 +44,7 @@ export const BlogPreviewSection: React.FC = () => {
               {/* Cover Image Container */}
               <div className="aspect-16/9 bg-slate-100 dark:bg-slate-900 overflow-hidden relative">
                 <img
-                  src={post.coverImage}
+                  src={assetUrl(post.coverImage)}
                   alt={post.title}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />

@@ -12,6 +12,7 @@ import {
 } from 'lucide-react';
 import { SYSTEM_SCREENS } from '../../data/mockData';
 import { SystemScreen } from '../../types';
+import { assetUrl } from '../../lib/utils';
 
 export const SystemShowcase: React.FC<{ onContactClick: () => void }> = ({ onContactClick }) => {
   const [activeScreenIndex, setActiveScreenIndex] = useState(0);
@@ -90,7 +91,7 @@ export const SystemShowcase: React.FC<{ onContactClick: () => void }> = ({ onCon
             <div className="lg:col-span-7 relative group rounded-2xl overflow-hidden bg-slate-900 border border-white/10 shadow-xl">
               <div className="aspect-video sm:aspect-16/10 relative overflow-hidden flex items-center justify-center bg-black/40">
                 <img
-                  src={currentScreen.image}
+                  src={assetUrl(currentScreen.image)}
                   alt={currentScreen.title}
                   className="w-full h-full object-contain object-center transition-transform duration-500 group-hover:scale-102"
                 />
@@ -218,7 +219,7 @@ export const SystemShowcase: React.FC<{ onContactClick: () => void }> = ({ onCon
               {/* Modal Image Body */}
               <div className="p-4 sm:p-6 flex-1 overflow-auto flex items-center justify-center bg-slate-950/60">
                 <img
-                  src={modalScreen.image}
+                  src={assetUrl(modalScreen.image)}
                   alt={modalScreen.title}
                   className="max-h-[65vh] w-auto object-contain rounded-lg shadow-lg border border-white/10"
                 />

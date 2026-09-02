@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { Lock, Mail, Eye, EyeOff, ShieldCheck, AlertCircle, ArrowLeft, ArrowRight } from 'lucide-react';
 import { adminLogin, getCurrentUser } from '../../lib/storage';
+import { assetUrl } from '../../lib/utils';
 
 export const AdminLoginPage: React.FC = () => {
   const navigate = useNavigate();
@@ -45,7 +46,7 @@ export const AdminLoginPage: React.FC = () => {
         <div className="flex justify-center mb-6">
           <Link to="/" className="inline-block">
             <img
-              src="/images/Logo_4xml-300x139.png"
+              src={assetUrl('images/Logo_4xml-300x139.png')}
               alt="4XML Fabritech"
               className="h-12 w-auto object-contain brightness-125"
             />

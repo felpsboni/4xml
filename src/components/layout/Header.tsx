@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X, Instagram, ChevronRight, PhoneCall, ShieldCheck, Sun, Moon } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTheme } from '../../lib/theme';
+import { assetUrl } from '../../lib/utils';
 
 export const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -91,7 +92,7 @@ export const Header: React.FC = () => {
             aria-label="4XML - Página Inicial"
           >
             <img
-              src="/images/Logo_4xml-300x139.png"
+              src={assetUrl('images/Logo_4xml-300x139.png')}
               alt="4XML Solução Fiscal Fabritech"
               className={`h-9 md:h-11 w-auto object-contain transition-transform duration-200 hover:scale-105 ${
                 !isScrolled || theme === 'dark' ? 'brightness-110' : ''
@@ -235,7 +236,7 @@ export const Header: React.FC = () => {
               <div>
                 <div className="flex items-center justify-between pb-6 border-b border-slate-100 dark:border-slate-800">
                   <img
-                    src="/images/Logo_4xml-300x139.png"
+                    src={assetUrl('images/Logo_4xml-300x139.png')}
                     alt="4XML"
                     className="h-8 w-auto object-contain brightness-110"
                   />

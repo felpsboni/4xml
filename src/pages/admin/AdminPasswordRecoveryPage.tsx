@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, ArrowLeft, CheckCircle2, Send } from 'lucide-react';
+import { assetUrl } from '../../lib/utils';
 
 export const AdminPasswordRecoveryPage: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -19,7 +20,7 @@ export const AdminPasswordRecoveryPage: React.FC = () => {
         <div className="flex justify-center mb-6">
           <Link to="/">
             <img
-              src="/images/Logo_4xml-300x139.png"
+              src={assetUrl('images/Logo_4xml-300x139.png')}
               alt="4XML Fabritech"
               className="h-12 w-auto object-contain brightness-125"
             />

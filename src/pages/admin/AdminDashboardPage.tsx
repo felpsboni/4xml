@@ -39,6 +39,7 @@ import {
   saveFaq,
   deleteFaq
 } from '../../lib/storage';
+import { assetUrl } from '../../lib/utils';
 import { Lead, BlogPost, FaqItem, LeadStatus } from '../../types';
 
 export const AdminDashboardPage: React.FC = () => {
@@ -218,7 +219,7 @@ export const AdminDashboardPage: React.FC = () => {
           <div className="flex items-center gap-4">
             <Link to="/admin/dashboard" className="flex items-center gap-2">
               <img
-                src="/images/Logo_4xml-300x139.png"
+                src={assetUrl('images/Logo_4xml-300x139.png')}
                 alt="4XML"
                 className="h-8 w-auto brightness-125"
               />

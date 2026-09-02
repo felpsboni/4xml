@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { assetUrl } from '../../lib/utils';
 import { 
   FileText, 
   CheckCircle2, 
@@ -191,7 +192,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onContactClick, onFeat
                 {/* System screenshot integration preview */}
                 <div className="relative rounded-lg overflow-hidden border border-slate-700/80 group">
                   <img
-                    src="/images/mockup3.png"
+                    src={assetUrl('images/mockup3.png')}
                     alt="Interface Oficial 4XML Cockpit Protheus"
                     className="w-full h-36 object-cover object-top transition-transform duration-500 group-hover:scale-105"
                   />

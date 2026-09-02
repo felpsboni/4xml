@@ -17,6 +17,7 @@ import {
   PhoneCall
 } from 'lucide-react';
 import { getBlogPostBySlug, getBlogPosts } from '../lib/storage';
+import { assetUrl } from '../lib/utils';
 
 export const ArticleDetailPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -133,7 +134,7 @@ export const ArticleDetailPage: React.FC = () => {
           {/* Featured Cover Image */}
           <div className="my-8 rounded-3xl overflow-hidden shadow-lg border border-slate-200 dark:border-slate-800 aspect-16/9 bg-slate-900">
             <img
-              src={post.coverImage}
+              src={assetUrl(post.coverImage)}
               alt={post.title}
               className="w-full h-full object-cover"
             />

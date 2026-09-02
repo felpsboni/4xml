@@ -7,6 +7,7 @@ import { CookieConsent } from '../components/layout/CookieConsent';
 import { Search, Calendar, Clock, ArrowRight, Tag, BookOpen, ChevronRight } from 'lucide-react';
 import { getBlogPosts } from '../lib/storage';
 import { BlogPost } from '../types';
+import { assetUrl } from '../lib/utils';
 
 export const BlogHubPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -112,7 +113,7 @@ export const BlogHubPage: React.FC = () => {
                   {/* Cover */}
                   <div className="aspect-16/9 bg-slate-100 dark:bg-slate-900 overflow-hidden relative">
                     <img
-                      src={post.coverImage}
+                      src={assetUrl(post.coverImage)}
                       alt={post.title}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
