@@ -1,0 +1,8 @@
+{
+  "name": "Remix 4XML | Automação Fiscal Integrada ao TOTVS Protheus",
+  "description": "Automatize o recebimento, a validação, a classificação e a entrada de NF-e, CT-e e NFS-e no ERP TOTVS Protheus com o 4XML.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
